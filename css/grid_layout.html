@@ -1,0 +1,10 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>CSS Grid Layout</title><style>
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; padding: 2rem; }
+.card { background: #1a1a2e; border-radius: 8px; padding: 1.5rem; border: 1px solid #2a2a3e; transition: transform 0.3s; }
+.card:hover { transform: translateY(-4px); border-color: #6c63ff; }
+.card h2 { color: #6c63ff; margin-bottom: 0.5rem; }
+.card p { color: #8888a0; }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+</style></head><body><div class="grid"><div class="card"><h2>Card 1</h2><p>Sample card content</p></div>
+<div class="card"><h2>Card 2</h2><p>Another card</p></div><div class="card"><h2>Card 3</h2><p>More content</p></div>
+<div class="card"><h2>Card 4</h2><p>Last card</p></div></div></body></html>
