@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Sortable Table</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:system-ui;background:#0a0a0f;color:#e8e8f0;padding:2rem;}
+table{width:100%;max-width:800px;margin:0 auto;border-collapse:collapse;}
+th,td{padding:0.8rem 1rem;text-align:left;border-bottom:1px solid #2a2a3e;}
+th{background:#12121a;color:#6c63ff;cursor:pointer;user-select:none;position:relative;}
+th:hover{background:#1a1a2e;}th .sort-arrow{opacity:0.3;margin-left:0.5rem;}th.sort-asc .sort-arrow{opacity:1;transform:rotate(180deg);display:inline-block;}
+th.sort-desc .sort-arrow{opacity:1;}tr:hover td{background:#12121a;}td{color:#8888a0;}
+</style></head><body><table id="sortableTable"><thead><tr><th onclick="sortTable(0)">Name <span class="sort-arrow">▲</span></th>
+<th onclick="sortTable(1)">Age <span class="sort-arrow">▲</span></th><th onclick="sortTable(2)">City <span class="sort-arrow">▲</span></th></tr></thead>
+<tbody><tr><td>Alice</td><td>28</td><td>Toronto</td></tr><tr><td>Bob</td><td>35</td><td>Vancouver</td></tr>
+<tr><td>Charlie</td><td>22</td><td>Waterloo</td></tr><tr><td>Diana</td><td>31</td><td>Montreal</td></tr></tbody></table>
+<script>function sortTable(col){const table=document.getElementById('sortableTable');const tbody=table.querySelector('tbody');
+const rows=Array.from(tbody.querySelectorAll('tr'));const header=table.querySelectorAll('th')[col];const isAsc=!header.classList.contains('sort-asc');
+table.querySelectorAll('th').forEach(th=>th.classList.remove('sort-asc','sort-desc'));header.classList.add(isAsc?'sort-asc':'sort-desc');
+rows.sort((a,b)=>{const aVal=a.children[col].textContent;const bVal=b.children[col].textContent;
+return isAsc?aVal.localeCompare(bVal,undefined,{numeric:true}):bVal.localeCompare(aVal,undefined,{numeric:true});});
+rows.forEach(r=>tbody.appendChild(r));}</script></body></html>
