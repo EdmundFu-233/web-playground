@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Tooltips</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:system-ui;background:#0a0a0f;color:#e8e8f0;display:flex;justify-content:center;align-items:center;min-height:100vh;gap:2rem;}
+.tooltip-wrapper{position:relative;display:inline-block;}.tooltip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#6c63ff;color:white;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.85rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s;margin-bottom:0.5rem;}
+.tooltip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid;border-color:#6c63ff transparent transparent transparent;}
+.tooltip-wrapper:hover .tooltip{opacity:1;}.btn{padding:0.8rem 2rem;background:#1a1a2e;color:#e8e8f0;border:1px solid #2a2a3e;border-radius:8px;cursor:pointer;font-size:1rem;}
+.btn:hover{border-color:#6c63ff;}</style></head><body><div class="tooltip-wrapper"><button class="btn">Hover me</button><div class="tooltip">I'm a tooltip!</div></div>
+<div class="tooltip-wrapper"><button class="btn">Hover too</button><div class="tooltip">Another tooltip</div></div></body></html>
