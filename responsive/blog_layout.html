@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Blog Layout</title>
+<style>*{margin:0;padding:0;box-sizing:border-box;}body{font-family:system-ui;background:#0a0a0f;color:#e8e8f0;}
+.header{text-align:center;padding:3rem 1rem;background:#12121a;}.header h1{font-size:2.5rem;color:#6c63ff;}.header p{color:#8888a0;margin-top:0.5rem;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;padding:2rem;max-width:1200px;margin:0 auto;}
+.post{background:#12121a;border:1px solid #2a2a3e;border-radius:12px;overflow:hidden;transition:transform 0.3s;}
+.post:hover{transform:translateY(-4px);border-color:#6c63ff;}.post-image{height:200px;background:linear-gradient(135deg,#6c63ff,#4ade80);}
+.post-content{padding:1.5rem;}.post-meta{color:#8888a0;font-size:0.85rem;margin-bottom:0.5rem;}
+.post-content h2{font-size:1.2rem;margin-bottom:0.5rem;}.post-content p{color:#8888a0;font-size:0.95rem;line-height:1.5;}
+.sidebar{max-width:300px;margin:2rem auto;padding:1.5rem;background:#12121a;border:1px solid #2a2a3e;border-radius:12px;}
+.sidebar h3{color:#6c63ff;margin-bottom:1rem;}.sidebar ul{list-style:none;}.sidebar li{padding:0.5rem 0;color:#8888a0;border-bottom:1px solid #2a2a3e;cursor:pointer;}
+.sidebar li:hover{color:#e8e8f0;}.footer{text-align:center;padding:2rem;color:#8888a0;border-top:1px solid #2a2a3e;margin-top:2rem;}
+@media (max-width:768px){.header h1{font-size:1.8rem;}.grid{grid-template-columns:1fr;padding:1rem;}}
+</style></head><body><div class="header"><h1>My Blog</h1><p>Thoughts on code and design</p></div>
+<div class="grid"><div class="post"><div class="post-image"></div><div class="post-content"><div class="post-meta">May 2024</div>
+<h2>Post Title</h2><p>Sample blog post content.</p></div></div><div class="post"><div class="post-image"></div>
+<div class="post-content"><div class="post-meta">Apr 2024</div><h2>Another Post</h2><p>More content here.</p></div></div></div>
+<div class="sidebar"><h3>Categories</h3><ul><li>Technology</li><li>Design</li><li>Development</li></ul></div>
+<div class="footer">&copy; 2024</div></body></html>
